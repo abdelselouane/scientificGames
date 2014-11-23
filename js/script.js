@@ -1,4 +1,4 @@
-var editor = CodeMirror.fromTextArea(document.getElementById("demotext"), {
+    var editor = CodeMirror.fromTextArea(document.getElementById("demotext"), {
 	      lineNumbers: true,
 	      mode: "application/ld+json",
 	      theme: "paraiso-dark",
@@ -91,7 +91,7 @@ var editor = CodeMirror.fromTextArea(document.getElementById("demotext"), {
                 //console.log( users );
                 //return false;
                 saveUsers( users );
-                window.location = "index.html";
+                window.location.reload(true); 
             });
         
             $('.edit').on('change', function(evt, newValue) {
@@ -102,7 +102,7 @@ var editor = CodeMirror.fromTextArea(document.getElementById("demotext"), {
                 if (newValue !== '') {
                     users[id][field] = newValue;
                     saveUsers( users );
-                    window.location = "index.html";
+                    window.location.reload(true);
                 }else{
                     console.log('can not be empty');
                 }
@@ -114,7 +114,7 @@ var editor = CodeMirror.fromTextArea(document.getElementById("demotext"), {
                     if (confirm("Do you really want to delete this user, are you sure?")) {
                          var removedObject = users.splice(id,1);
                          saveUsers( users );
-                         window.location = "index.html";
+                         window.location.reload(true);
                     }
                 }else{
                     alert("This user is the last registered user, it can not be deleted");
