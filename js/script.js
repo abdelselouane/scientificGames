@@ -43,10 +43,11 @@ var editor = CodeMirror.fromTextArea(document.getElementById("demotext"), {
                   type: "POST",
                   data: { users : obj },
                   success: function( response ){
-
-                      //console.log(response);
-
-                  }
+                      console.log(response);
+                  },
+                    error: function(response){
+                        console.log(response);
+                    }    
                 });
             }
             
@@ -103,7 +104,6 @@ var editor = CodeMirror.fromTextArea(document.getElementById("demotext"), {
                     saveUsers( users );
                     window.location = "index.html";
                 }else{
-                    
                     console.log('can not be empty');
                 }
             });

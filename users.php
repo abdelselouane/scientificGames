@@ -2,7 +2,7 @@
 
 if(isset($_POST)){
 
-    //echo '<pre>'; print_r($_POST['users']); echo'</pre>';
+    //echo '<pre>'; print_r($_POST['users']); echo'</pre>';exit;
 
     $file = 'js/data/users.js';
     $handle = fopen($file, 'w') or die('Cannot open file:  '.$file);
@@ -23,7 +23,7 @@ if(isset($_POST)){
    // echo $document;
     
     //exit;
-    fwrite($handle, $document);
+    return fwrite($handle, $document);
     fclose($handle);
     exit;
 }
