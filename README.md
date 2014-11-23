@@ -14,6 +14,10 @@
 
 ######## INSTRUCTIONS #######
 
+* Gihub link to the project: https://github.com/abdelselouane/scientificGames
+
+* Project is host here: scientificgames.blackdiamondforce.com
+
 * Use a local server to install the dashboard, there is a php script requires Apache
 
 * Set full permission to JS folder and its files, php script reads/writes from/on users.js file

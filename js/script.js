@@ -150,10 +150,10 @@ var editor = CodeMirror.fromTextArea(document.getElementById("demotext"), {
                 var id = this.getAttribute('data-id');
                 var user = getUser(users, id);
                 $('#myModalLabel').html('<span class="glyphicon glyphicon-user"></span> Edit User');
-                $('#name').val(user.name);
-                $('#phone').val(user.phone);
-                $('#title').val(user.title);
-                $('#office').val(user.office);
+                $('#name').val(user.name).removeAttr('disabled');;
+                $('#phone').val(user.phone).removeAttr('disabled');;
+                $('#title').val(user.title).removeAttr('disabled');;
+                $('#office').val(user.office).removeAttr('disabled');;
                 $('#user_submit').removeAttr('disabled');
                 $('#user_submit').attr( "data-id", id );
                 $('#user_submit').attr( "data-action", "edit" );
