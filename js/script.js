@@ -37,19 +37,19 @@
                 $('#table-content').html(getContent(users));
             }
             
-           
+
             var saveUsers = function( obj ){
-            	
                 $.ajax({
                   url: "users.php",
                   type: "POST",
                   data: { users : obj },
                   success: function( response ){
+
                       if( response == 'success' ) window.location.reload(true); 
                   },
 		          error: function(error){
 		      		  console.log( error ); return false;
-		          }    
+		          }  
                 });
             }
             
@@ -71,7 +71,8 @@
             $('#user_submit').click(function(){
                 var id = this.getAttribute('data-id');
                 var action = this.getAttribute('data-action');
-                               
+
+
                 var formObj = {};
                 var inputs = $('#user_form').serializeArray();
                 
@@ -87,7 +88,9 @@
                     users[id].title = formObj.title;
                     users[id].office = formObj.office;
                 }
-                 saveUsers( users );
+
+                saveUsers( users );
+
             });
         
             $('.edit').on('change', function(evt, newValue) {

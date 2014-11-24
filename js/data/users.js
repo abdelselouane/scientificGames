@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 var users = [{name:"abdel123",phone:"121212121",title:"title test",office:"office test"},{name:"name10",phone:"1010010101",title:"title10",office:"office10"},{name:"name12",phone:"09812235442",title:"title12",office:"office12"},{name:"test1010",phone:"1324123514",title:"title 10101",office:"office 10101"},{name:"test refresh",phone:"3142341235",title:"title refresh",office:"office refresh"},{name:"add new ",phone:"0909091231",title:"add title new",office:"office test"}];
+=======
+var users = [{name:"abdel123",phone:"1234567890",title:"title12345",office:"abdel123"},{name:"dasdfads",phone:"asdfasdf",title:"title4",office:"office4"},{name:"name10",phone:"1010010101",title:"title10",office:"office10"},{name:"name12",phone:"09812235442",title:"title12",office:"office12"},{name:"test1010",phone:"1324123514",title:"title 10101",office:"office 10101"},{name:"test refresh",phone:"3142341235",title:"title refresh",office:"office refresh"},{name:"add new test",phone:"0909091231",title:"add title new",office:"office test"},{name:"abdelselouane",phone:"101010101",title:"title01",office:"office01"}];
+>>>>>>> 8c79a9e6a7a025bf0ba13a1f159ea95883d45b6e

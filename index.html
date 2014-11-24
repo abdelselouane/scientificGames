@@ -1,3 +1,4 @@
+
 <!--******************
 Scientific Games
 Author: Abdel Selouane
@@ -155,6 +156,164 @@ Date: November 23, 2014
 	
     <!-- Users File & Page Script  -->
     <script src="js/data/users.js?n=1"></script> 
+    <script src="js/script.js?n=1"></script>
+  </body>
+</html>
+=======
+<!--******************
+Scientific Games
+Author: Abdel Selouane
+Date: November 23, 2014
+********************-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Scientific Games - Json TEST Dashboard">
+    <meta name="author" content="Abdel Selouane">
+
+    <title>Dashboard Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/plug-ins/9dcbecd42ad/integration/bootstrap/3/dataTables.bootstrap.css">
+    
+    <!-- CodeMinoror core CSS & Theme CSS -->
+	<link rel="stylesheet" href="css/codeminor/codemirror.css">
+	<link rel="stylesheet" href="css/codeminor/paraiso-dark.css">
+      
+    <!-- Custom styles for this template -->
+    <link href="css/pages/dashboard.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Scientific Games</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Sign Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">Users Overview <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Export</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">Dashboard</h1>
+          <h3 class="sub-header"><span class="glyphicon glyphicon-th-list"></span> Users Listing</h3>
+          <div class="table-responsive">
+            <!-- Alert Messages -->
+            <table id="user_listing" class="table table-striped">
+              <thead>
+                <tr>
+                    <th colspan="6">
+                        <!-- Button trigger modal -->
+                        <button type="button" id="add_user" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
+                          Add New User
+                        </button>
+                    </th>
+                </tr>
+                <tr>
+                	<th><span class="glyphicon glyphicon-user"></span></th>
+                  	<th>Name</th>
+	                <th>Phone</th>
+	                <th>Title</th>
+	                <th>Office</th>
+	                <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="table-content">
+              </tbody>
+            </table>
+          </div>
+          <div class="row">
+            <div id="result2">
+            	<textarea id="demotext">
+			 	</textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Add Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-user"></span> Add New User</h4>
+          </div>
+          <div class="modal-body">
+              <form id="user_form" role="form">
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter phone">
+                  </div>
+                  <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" class="form-control" id="title" name="title" placeholder="Enter title">
+                  </div>
+                  <div class="form-group">
+                    <label for="office">Office</label>
+                    <input type="text" class="form-control" id="office" name="office" placeholder="Enter office">
+                  </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" id="user_submit" data-action="" data-action="add" class="btn btn-primary">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>   
+	<!-- All JavaScript Files goes here
+    ================================================== -->
+    <!-- jQuery & Bootstrap - jQuery Functionality & Bootstrap Design -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    
+    <!-- Editable Table - edit table fields instantly -->
+    <script src="js/editable/mindmup-editabletable.js"></script>
+    
+    <!-- Data Table Plugin - data table to search & organize users listings instantly -->
+    <script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" language="javascript" src="//cdn.datatables.net/plug-ins/9dcbecd42ad/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+	
+    <!-- Codemirror Plugin - code editor to display users instantly -->  
+    <script src="js/codeminor/codemirror.js"></script>
+	<script src="js/codeminor/codemirror.script.js"></script>
+      
+    <!-- Users File & Page Script  -->
+    <script src="js/data/users.js"></script> 
     <script src="js/script.js?n=1"></script>
   </body>
 </html>
